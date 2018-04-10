@@ -20,6 +20,7 @@ The workflow is as follows:
   - By creating a new branch we also avoid having the status of one of our production/development branches overwritten by the API triggered-builds
 - We trigger a build request on this branch via API. This build will use a special `before_install` step, where it checks out the target commit. In this request we need to pass the target branch (`$TARGET_BRANCH`) and commit SHA (`$TARGET_COMMIT_SHA` as environment variables that will be used by git commands.
 
+**Note:** Builds triggered with this workflow **won't use** the `.travis.yml` file existing in your target commit. The commands executed in the job will be the ones defined in the `.travis.yml` of the branch you trigger the request against, and/or the configuration included in the API request itself. Note, however, that these commands will be executed against the code in the target commit, which is the objective here.
 
 ### Approach 1: keep configuration in a .travis.yml file
 
