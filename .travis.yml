@@ -2,6 +2,10 @@ language: ruby
 dist: trusty
 sudo: false
 
+before_install:
+  - git fetch origin $TARGET_BRANCH
+  - git checkout $TARGET_COMMIT_SHA
+
 install:
   - echo "Install"
 
