@@ -30,7 +30,7 @@ The workflow is as follows:
     - git checkout $TARGET_COMMIT_SHA
   ```
 
-This approach can be useful if we need to run the same commands for all our manual builds (the same `install`, `deploy` and/or `script` steps. This way, we don't need to specify the commands in all our API build requests.
+This approach can be useful if we need to run the same commands for all our manual builds (the same `install`, `deploy` and/or `script` steps). This way, we don't need to specify the same commands in all our API build requests.
 
 #### Request example
 
@@ -73,7 +73,7 @@ This example defines the `before_install` step that will checkout the commit, as
 ```
 body='{
  "request": {
- "branch":"manual_builds",
+ "branch":"empty_branch",
  "message":"Trigger build for <COMMIT_SHA>";
  "config": {
    "env": {
