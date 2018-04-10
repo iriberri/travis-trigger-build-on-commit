@@ -1,9 +1,0 @@
-language: ruby
-dist: trusty
-sudo: false
-
-install:
-  - echo "Install"
-
-script:
-  - echo "Script"
