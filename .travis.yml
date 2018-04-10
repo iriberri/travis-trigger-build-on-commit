@@ -4,6 +4,8 @@ sudo: false
 
 install:
   - echo "Install"
+  - echo "Install2"
 
 script:
   - echo "Script"
+  - echo "Script2"
