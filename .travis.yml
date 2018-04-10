@@ -3,9 +3,7 @@ dist: trusty
 sudo: false
 
 install:
-  - echo "Install"
-  - echo "Install2"
+  - echo "This configuration will not be used"
 
 script:
-  - echo "Script"
-  - echo "Script2"
+  - echo "This configuration will not be used"
